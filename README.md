@@ -12,6 +12,9 @@ mkdir -p downloads/qbittorrent/{completed,incomplete,torrents}
 ```
 Map it as follows in qbittorrent:
 ![Qbittorrent folder structure](qbittorrent-folder-structure.png)
+
+Setup sonarr and radarr so that they remove torrents after completion. This way the media will only be found in the sonarr and radarr directories. Also make sure qbittorrent stops torrents when they hit ratio 0, which causes them to be marked as completed.
+
 Test VPN connections:
 ```
 docker exec -it prowlarr bash
