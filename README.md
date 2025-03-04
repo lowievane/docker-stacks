@@ -22,5 +22,8 @@
 ## Gaming
 - MCSManager Web
 - MCSManager Daemon
+## Monitoring
+- Prometheus
+- Grafana
 ## Other
  - Homarr
