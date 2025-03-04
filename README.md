@@ -7,7 +7,11 @@ lxc.mount.entry: /dev/net dev/net none bind,create=dir
 lxc.mount.entry: /dev/net/tun dev/net/tun none bind,create=file
 ```
 Make directories on share:
-`mkdir -p downloads/qbittorrent/{completed,incomplete,torrents}`
+```
+mkdir -p downloads/qbittorrent/{completed,incomplete,torrents}
+```
+Map it as follows in qbittorrent:
+[Qbittorrent folder structure](qbittorrent-file-structure.png)
 Test VPN connections:
 ```
 docker exec -it prowlarr bash
