@@ -11,7 +11,7 @@ Make directories on share:
 mkdir -p downloads/qbittorrent/{completed,incomplete,torrents}
 ```
 Map it as follows in qbittorrent:
-[Qbittorrent folder structure](qbittorrent-file-structure.png)
+[Qbittorrent folder structure](qbittorrent-folder-structure.png)
 Test VPN connections:
 ```
 docker exec -it prowlarr bash
