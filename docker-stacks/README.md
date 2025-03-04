@@ -15,7 +15,7 @@ Test VPN connections:
 docker exec -it container_name bash
 wget -qO- https://ipinfo.io
 ```
-## Wireguard, Monitoring & Minecraft Stack
+## Wireguard, monitoring & Minecraft Stack
 All configs are linked to /opt/docker/.
 
 Fix permissions first:
