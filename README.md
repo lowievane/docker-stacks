@@ -26,4 +26,5 @@ sudo chmod 770 /opt
 ## Homarr
 wip
 ## Nginx Proxy Manager
-wip
+Compose file is wip
+I have my domain pointed to the local IP of the NPM instance, this then acts like a reverse proxy with SSL certs. This way I have subdomains per service I use, all with valid certs.
