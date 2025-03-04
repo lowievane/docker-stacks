@@ -24,6 +24,7 @@
 - MCSManager Daemon
 ## Monitoring
 - Prometheus
+- Prometheus PVE Exporter
 - Grafana
 ## Other
  - Homarr
