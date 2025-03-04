@@ -1,26 +1,22 @@
 # Docker Stacks
 ## *arr stack
+All data is linked to /data, where a data share is mounted.
+All configs are linked to /docker, where another share is mounted specifically for Docker configurations.
 When running in Proxmox CTs, put this in config file first:
 ```
 lxc.cgroup2.devices.allow: c 10:200 rwm
 lxc.mount.entry: /dev/net dev/net none bind,create=dir
 lxc.mount.entry: /dev/net/tun dev/net/tun none bind,create=file
 ```
-Make directories on share:
-```
-mkdir -p downloads/qbittorrent/{completed,incomplete,torrents}
-```
-Map it as follows in qbittorrent:
-![Qbittorrent folder structure](qbittorrent-folder-structure.png)
-
-Setup sonarr and radarr so that they remove torrents after completion. This way the media will only be found in the sonarr and radarr directories. Also make sure qbittorrent stops torrents when they hit ratio 0, which causes them to be marked as completed.
-
 Test VPN connections:
 ```
-docker exec -it prowlarr bash
+docker exec -it container_name bash
 wget -qO- https://ipinfo.io
 ```
+## wireguard stack
+All configs are linked to /opt/docker/.
+Fix permissions first:
 ```
-docker exec -it qbittorrent bash
-wget -qO- https://ipinfo.io
+sudo chown :docker /opt
+sudo chmod 770 /opt
 ```
