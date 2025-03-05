@@ -1,3 +1,4 @@
+version: '3.9'
 services:
   web:
     image: githubyumao/mcsmanager-web:latest
@@ -13,7 +14,7 @@ services:
     restart: unless-stopped
     ports:
       - "24444:24444"
-      - "19565:19565"
+      - "19565:19565" # this port is used by the Prometheus Exporter Forge mod by cpburnz
     environment:
       - MCSM_DOCKER_WORKSPACE_PATH=/opt/docker/mcs/daemon/data/InstanceData
     volumes:
