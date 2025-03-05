@@ -18,21 +18,19 @@ services:
     cap_add:
       - NET_ADMIN
       - SYS_MODULE #optional
-    devices:
-      - /dev/net/tun:/dev/net/tun
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Brussels
       - SERVERURL=domain
-      - SERVERPORT=51820 #optional
+      - SERVERPORT=port #optional
       - PEERS=peer1,peer2
       - PEERDNS=dnsserver
     volumes:
       - /opt/docker/wireguard:/config
       - /lib/modules:/lib/modules #optional
     ports:
-      - 51820:51820/udp
+      - port:51820/udp
     sysctls:
       - net.ipv4.conf.all.src_valid_mark=1
     restart: unless-stopped
