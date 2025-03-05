@@ -25,6 +25,7 @@
 ## Monitoring
 - Prometheus
 - Prometheus PVE Exporter
+- Prometheus Exporter by cpburnz (Minecraft Forge server exporter)
 - Grafana
 ## Other
  - Homarr
